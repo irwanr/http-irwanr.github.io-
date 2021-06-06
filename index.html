@@ -11,10 +11,14 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
+    <!-- AOS CSS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio | Muhammad Irwan</title>
   </head>
+
   <body id="home">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm navbar fixed-top">
@@ -25,19 +29,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
             <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#galery">Galery</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#galery">Gallery</a>
+            <a class="nav-link" href="#contact">Contact Me</a>
           </div>
         </div>
       </div>
     </nav>
+
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="img/irwan.jpg" alt="irwan" class="rounded-circle img-thumbnail" width="200" />
-      <h1 class="display-4 fst-italic">Muhammad Irwan. R</h1>
-      <p class="lead">Enggineer | Programmer</p>
+      <h1 class="display-4 fst-italic" data-aos="fade-up">Muhammad Irwan. R</h1>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -55,13 +60,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>
               I am a graduate student in electrical engineering from the state polytechnic of Ujung Pandang. I was actively involved in the robotics community during college which allowed me to work well on my own initiative or in team
               work.I am currently working in a state power company as a junior enggineer for grids and substations.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left">
             <p>
               I enjoy learning and have great motivation to gain and learn new knowledge. other than that I am responsible and reliable to carry out the task. In addition to carrying out my daily work routine, I also take the time to learn
               programming both as a web developer and as an application developer.
@@ -86,7 +91,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div class="card">
               <img src="img/galery/1.jpg" class="card-img-top" alt="Galery 1" />
               <div class="card-body">
@@ -94,7 +99,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2400">
             <div class="card">
               <img src="img/galery/2.jpg" class="card-img-top" alt="Galery 2" />
               <div class="card-body">
@@ -102,7 +107,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2800">
             <div class="card">
               <img src="img/galery/3.jpg" class="card-img-top" alt="Galery 3" />
               <div class="card-body">
@@ -110,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3200">
             <div class="card">
               <img src="img/galery/4.jpg" class="card-img-top" alt="Galery 4" />
               <div class="card-body">
@@ -118,7 +123,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3600">
             <div class="card">
               <img src="img/galery/5.jpg" class="card-img-top" alt="Galery 5" />
               <div class="card-body">
@@ -181,6 +186,7 @@
         ></path>
       </svg>
     </section>
+
     <!-- Footer -->
     <footer class="bg-success text-white text-center pb-4">
       <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a class="text-white fw-bold" href="https://www.instagram.com/irwan7058/">Muhammad Irwan</a></p>
@@ -223,6 +229,41 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
+
+    <!-- Script Animation AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 50, // values from 0 to 3000, with step 50ms
+        duration: 2000, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+
+    <!-- Script Animation GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2.5, delay: 2, text: "Enggineer | Programmer" });
+      gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0 });
     </script>
   </body>
 </html>
