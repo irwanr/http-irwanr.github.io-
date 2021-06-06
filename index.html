@@ -41,7 +41,7 @@
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
       <img src="img/irwan.jpg" alt="irwan" class="rounded-circle img-thumbnail" width="200" />
-      <h1 class="display-4 fst-italic" data-aos="fade-up">Muhammad Irwan. R</h1>
+      <h1 class="display-4 fst-italic">Muhammad Irwan. R</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -262,6 +262,7 @@
     <script>
       gsap.registerPlugin(TextPlugin);
       gsap.to(".lead", { duration: 2.5, delay: 2, text: "Enggineer | Programmer" });
+      gsap.from("section h1", { duration: 2, x: "-200%", opacity: 0 });
       gsap.from(".jumbotron img", { duration: 2, rotateY: 360, opacity: 0 });
       gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0 });
     </script>
